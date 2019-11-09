@@ -10,7 +10,10 @@
         android:id="@+id/listViewProductName"
         android:layout_width="match_parent"
         android:layout_height="35dp"
+        android:background="#2D455E"
+        android:fontFamily="serif-monospace"
         android:text="Product Name:"
+        android:textColor="#E7D857"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -18,14 +21,22 @@
         android:id="@+id/listViewProductPrice"
         android:layout_width="match_parent"
         android:layout_height="35dp"
+        android:background="#2D455E"
+        android:fontFamily="serif-monospace"
         android:text="Product Price: "
-        android:textSize="18sp" />
+        android:textColor="#E7D857"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/listViewProductDescription"
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:background="#2D455E"
+        android:fontFamily="serif-monospace"
         android:text="Product Description:"
-        android:textSize="18sp" />
+        android:textColor="#E7D857"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
 </LinearLayout>
