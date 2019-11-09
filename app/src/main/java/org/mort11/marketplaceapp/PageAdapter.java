@@ -13,7 +13,6 @@ public class PageAdapter extends FragmentStatePagerAdapter {
     public PageAdapter(FragmentManager fragmentManager, Fragment... fragments) {
         super(fragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         this.fragments = fragments;
-        //
     }
 
     @Nullable
