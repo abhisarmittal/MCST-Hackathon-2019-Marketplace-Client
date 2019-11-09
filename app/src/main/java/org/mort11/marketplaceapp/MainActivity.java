@@ -7,13 +7,11 @@ import androidx.viewpager.widget.ViewPager;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.WindowManager;
 
 import com.google.android.material.tabs.TabLayout;
 
 import java.io.IOException;
 import java.net.Inet4Address;
-import java.net.InetAddress;
 import java.net.Socket;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,13 +27,16 @@ public class MainActivity extends AppCompatActivity {
         initTabs();
         connectingDialogFragment = new ConnectingDialogFragment();
         connectingDialogFragment.show(getSupportFragmentManager(), "Connecting to Sever");
-        connectToServer();
+        //connectToServer();
     }
 
     public void initTabs() {
         ViewPager viewPager = findViewById(R.id.view_pager);
         TabLayout tabs = findViewById(R.id.tabs);
         PageAdapter tabAdapter = new PageAdapter(getSupportFragmentManager(), new Buy(), new Sell());
+        Log.d("Custom", "Tabs: " + tabs);
+        Log.d("Custom", "ViewPager: " + viewPager);
+        Log.d("Custom", "PageAdapter: " + tabAdapter);
         viewPager.setAdapter(tabAdapter);
         tabs.setupWithViewPager(viewPager);
     }

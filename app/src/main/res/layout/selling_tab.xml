@@ -12,6 +12,7 @@
         android:layout_weight="0.1">
 
         <LinearLayout
+            android:id="@+id/linlayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -25,58 +26,7 @@
                 tools:visibility="invisible" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="300dp"
-                android:layout_height="25dp"
-                android:layout_gravity="center"
-                android:layout_weight="0.1"
-                android:gravity="center">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/product_description"
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:inputType="textMultiLine"
-                    android:text="Product Description" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <View
-                android:id="@+id/divider2"
-                android:layout_width="match_parent"
-                android:layout_height="63dp"
-                android:layout_weight="0.1"
-                android:background="?android:attr/listDivider"
-                android:visibility="invisible" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="300dp"
-                android:layout_height="25dp"
-                android:layout_gravity="center"
-                android:layout_weight="0.1"
-                android:gravity="center">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/product_price"
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:inputType="numberDecimal"
-                    android:text="Product Price" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <View
-                android:id="@+id/divider"
-                android:layout_width="match_parent"
-                android:layout_height="57dp"
-                android:layout_weight="1"
-                android:background="?android:attr/listDivider"
-                android:visibility="invisible" />
-
-            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/productNameLayout"
                 android:layout_width="300dp"
                 android:layout_height="25dp"
                 android:layout_gravity="center"
@@ -90,8 +40,63 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:inputType="text"
-                    android:text="Product Name">
+                    android:hint="Product Name"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:layout_weight="0.1"
+                android:background="?android:attr/listDivider"
+                android:visibility="invisible" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/productPriceLayout"
+                android:layout_width="300dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.1"
+                android:gravity="center">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/product_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="Product Price"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_weight="1"
+                android:background="?android:attr/listDivider"
+                android:visibility="invisible" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/productDescriptionLayout"
+                android:layout_width="300dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.1"
+                android:gravity="center">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/product_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:baselineAligned="false"
+                    android:gravity="center"
+                    android:hint="Product Description"
+                    android:inputType="textMultiLine|text">
 
                 </com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
@@ -103,7 +108,7 @@
         android:layout_width="300dp"
         android:layout_height="10dp"
         android:layout_gravity="center"
-        android:layout_weight="0.05"
+        android:layout_weight="0.01"
         android:text="Submit" />
 
 </LinearLayout>
