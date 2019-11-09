@@ -12,6 +12,7 @@
         android:layout_weight="0.1">
 
         <LinearLayout
+            android:id="@+id/linlayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -25,6 +26,7 @@
                 tools:visibility="invisible" />
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/productNameLayout"
                 android:layout_width="300dp"
                 android:layout_height="25dp"
                 android:layout_gravity="center"
@@ -51,6 +53,7 @@
                 android:visibility="invisible" />
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/productPriceLayout"
                 android:layout_width="300dp"
                 android:layout_height="25dp"
                 android:layout_gravity="center"
@@ -77,6 +80,7 @@
                 android:visibility="invisible" />
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/productDescriptionLayout"
                 android:layout_width="300dp"
                 android:layout_height="25dp"
                 android:layout_gravity="center"
