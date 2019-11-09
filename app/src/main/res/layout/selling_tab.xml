@@ -53,6 +53,7 @@
                     android:textColor="#E7D857"
                     android:textSize="30sp"
                     android:textStyle="bold" />
+
             </com.google.android.material.textfield.TextInputLayout>
 
             <View

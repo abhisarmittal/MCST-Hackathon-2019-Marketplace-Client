@@ -6,6 +6,8 @@
         <item name="colorPrimary">#2D455E</item>
         <item name="colorPrimaryDark">#2D455E</item>
         <item name="colorAccent">#E7D857</item>
+        <item name="colorControlNormal">#2D455E</item>
+        <item name="colorControlActivated">#2D455E</item>
     </style>
 
 </resources>
