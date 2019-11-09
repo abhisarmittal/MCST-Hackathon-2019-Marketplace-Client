@@ -22,7 +22,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="73dp"
                 android:layout_weight="0.1"
-                android:background="?android:attr/listDivider"
+                android:background="#FFFFFF"
+                android:visibility="invisible"
                 tools:visibility="invisible" />
 
             <com.google.android.material.textfield.TextInputLayout
