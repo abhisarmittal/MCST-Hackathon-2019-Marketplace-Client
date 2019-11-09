@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.net.Inet4Address;
 import java.net.Socket;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     private static DialogFragment connectingDialogFragment;
     private static Socket socket;
