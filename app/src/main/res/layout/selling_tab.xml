@@ -50,7 +50,7 @@
                     android:gravity="center"
                     android:hint="Product Name"
                     android:inputType="text"
-                    android:textColor="#FF9900"
+                    android:textColor="#E7D857"
                     android:textSize="30sp"
                     android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -83,7 +83,7 @@
                     android:gravity="center"
                     android:hint="Product Price"
                     android:inputType="numberDecimal"
-                    android:textColor="#FF9900"
+                    android:textColor="#E7D857"
                     android:textSize="30sp"
                     android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -117,6 +117,7 @@
                     android:gravity="center"
                     android:hint="Product Description"
                     android:inputType="textMultiLine|text"
+                    android:textColor="#E7D857"
                     android:textSize="30sp"
                     android:textStyle="bold">
 
@@ -129,7 +130,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
                 android:layout_weight="1"
-                android:background="?android:attr/listDivider" />
+                android:background="?android:attr/listDivider"
+                android:visibility="invisible" />
 
             <Button
                 android:id="@+id/submitButton"
@@ -150,7 +152,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="71dp"
                 android:layout_weight="0.1"
-                android:background="?android:attr/listDivider" />
+                android:background="?android:attr/listDivider"
+                android:visibility="invisible" />
 
             <ImageView
                 android:id="@+id/imageView3"
