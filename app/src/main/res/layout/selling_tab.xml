@@ -1,27 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:orientation="vertical"
+    android:translationY="150dp">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="19dp"
-        android:layout_weight="1">
+        android:layout_width="300dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:layout_weight="0.1">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="179dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
             android:layout_weight="1"
-            android:text="texter">
+            android:inputType="text"
+            android:text="Product Name">
 
         </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="300dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:layout_weight="0.1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:inputType="numberDecimal"
+            android:text="Product Price" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="300dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:layout_weight="0.1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:inputType="textMultiLine"
+            android:text="Product Description" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Button" />
+        android:id="@+id/submitButton"
+        android:layout_width="300dp"
+        android:layout_height="10dp"
+        android:layout_gravity="center"
+        android:layout_weight="0.05"
+        android:text="Submit" />
+
 </LinearLayout>
