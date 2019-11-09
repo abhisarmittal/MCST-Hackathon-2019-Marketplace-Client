@@ -16,18 +16,16 @@ import java.net.Socket;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static Context context;
     private static DialogFragment connectingDialogFragment;
     private static Socket socket;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        context = getApplicationContext();
         setContentView(R.layout.activity_main);
         initTabs();
         connectingDialogFragment = new ConnectingDialogFragment();
         connectingDialogFragment.show(getSupportFragmentManager(), "Connecting to Sever");
-        //connectToServer();
+        connectToServer();
     }
 
     public void initTabs() {

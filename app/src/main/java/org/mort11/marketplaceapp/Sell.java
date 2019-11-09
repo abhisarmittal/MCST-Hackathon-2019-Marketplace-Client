@@ -7,12 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
-
-import android.view.View;
-import android.view.WindowManager;
-import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -43,6 +38,7 @@ public class Sell extends Fragment {
 
                 Product userProduct = new Product(productName, productPrice, productDescription);
                 //SEND PRODUCT TO SERVER
+                sendProductToServer(userProduct);
 
                 //clear user inputs
                 productNameLayout.getEditText().getText().clear();
@@ -54,16 +50,8 @@ public class Sell extends Fragment {
         return view;
     }
 
-    public void sendProductToServer(){
-        String productJSON = "";
-        try {
-            DataOutputStream socketOS = new DataOutputStream(MainActivity.getSocket().getOutputStream());
-            socketOS.writeUTF(productJSON);
-            socketOS.flush();
-            socketOS.close();
-        }catch(Exception e){
-            e.printStackTrace();
-        }
+    public void sendProductToServer(Product product){
+        product.sendToServer();
     }
 
 }
