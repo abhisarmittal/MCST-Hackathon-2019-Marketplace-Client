@@ -38,8 +38,8 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:inputType="textMultiLine"
-                    android:text="Product Description" />
+                    android:hint="Product Name"
+                    android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <View
@@ -90,8 +90,8 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:inputType="text"
-                    android:text="Product Name">
+                    android:inputType="textMultiLine|text"
+                    android:text="Product Description">
 
                 </com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
