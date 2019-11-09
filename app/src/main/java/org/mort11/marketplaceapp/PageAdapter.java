@@ -22,6 +22,8 @@ public class PageAdapter extends FragmentStatePagerAdapter {
             return "Sell";
         }else if (fragments[position].getClass().getSimpleName().equals("Buy")){
             return "Buy";
+        }else if (fragments[position].getClass().getSimpleName().equals("Inventory")){
+            return "Inventory";
         }
         return fragments[position].getClass().getSimpleName();
     }

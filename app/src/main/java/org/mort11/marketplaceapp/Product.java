@@ -1,5 +1,7 @@
 package org.mort11.marketplaceapp;
 
+import android.util.Log;
+
 public class Product {
     public String name;
     public double price;
@@ -16,4 +18,10 @@ public class Product {
         this.price = price;
         this.description = null;
     }
+
+    public void buy(){
+        ProductHolder.productsToBuy.remove(this);
+        ProductHolder.productsBought.add(this);
+    }
+
 }

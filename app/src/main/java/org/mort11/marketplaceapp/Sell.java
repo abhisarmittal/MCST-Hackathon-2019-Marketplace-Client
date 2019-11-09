@@ -42,7 +42,7 @@ public class Sell extends Fragment {
                 String productDescription = productDescriptionLayout.getEditText().getText().toString();
 
                 Product userProduct = new Product(productName, productPrice, productDescription);
-                ProductHolder.addProduct(userProduct);
+                ProductHolder.addProductToBuy(userProduct);
                 //SEND PRODUCT TO SERVER
 
                 //clear user inputs
