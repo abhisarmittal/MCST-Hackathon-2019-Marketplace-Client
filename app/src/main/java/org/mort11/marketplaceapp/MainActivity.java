@@ -16,7 +16,7 @@ import java.io.OutputStream;
 import java.net.Inet4Address;
 import java.net.Socket;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
 
     private static DialogFragment connectingDialogFragment;
     private static Socket socket;
@@ -33,10 +33,7 @@ public class MainActivity extends AppCompatActivity{
     public void initTabs() {
         ViewPager viewPager = findViewById(R.id.view_pager);
         TabLayout tabs = findViewById(R.id.tabs);
-        PageAdapter tabAdapter = new PageAdapter(getSupportFragmentManager(), new Buy(), new Sell());
-        Log.d("Custom", "Tabs: " + tabs);
-        Log.d("Custom", "ViewPager: " + viewPager);
-        Log.d("Custom", "PageAdapter: " + tabAdapter);
+        PageAdapter tabAdapter = new PageAdapter(getSupportFragmentManager(), new Sell(), new Buy());
         viewPager.setAdapter(tabAdapter);
         tabs.setupWithViewPager(viewPager);
     }

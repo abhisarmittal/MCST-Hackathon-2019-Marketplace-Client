@@ -2,6 +2,8 @@ package org.mort11.marketplaceapp;
 
 import android.util.Log;
 
+import android.util.Log;
+
 import com.google.gson.Gson;
 
 import java.io.DataInputStream;
@@ -45,5 +47,11 @@ public class Product {
             }
         }).start();
     }
+
+    public void buy(){
+        ProductHolder.productsToBuy.remove(this);
+        ProductHolder.productsBought.add(this);
+    }
+
 
 }

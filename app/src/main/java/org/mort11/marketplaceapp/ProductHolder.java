@@ -2,18 +2,25 @@ package org.mort11.marketplaceapp;
 import java.util.ArrayList;
 
 public class ProductHolder {
-    public static ArrayList<Product> products;
+    public static ArrayList<Product> productsToBuy;
+    public static ArrayList<Product> productsBought;
     static{
-        products = new ArrayList<Product>();
+        productsToBuy = new ArrayList<Product>();
+        productsBought = new ArrayList<Product>();
     }
 
-    public static Product addProduct(String productJSON)
+    public static Product addProductToBuy(String productJSON)
     {
         return null;
     }
 
-    public static void addProduct(Product product)
+    public static void addProductToBuy(Product product)
     {
-        products.add(product);
+        productsToBuy.add(product);
+    }
+
+    public static void addProductBought(Product product) //change
+    {
+        productsBought.add(product);
     }
 }
