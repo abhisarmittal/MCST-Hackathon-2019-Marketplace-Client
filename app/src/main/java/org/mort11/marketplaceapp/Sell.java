@@ -18,6 +18,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import java.io.DataOutputStream;
+
 public class Sell extends Fragment {
 
     @Nullable
@@ -51,6 +53,18 @@ public class Sell extends Fragment {
             }
         });
         return view;
+    }
+
+    public void sendProductToServer(){
+        String productJSON = "";
+        try {
+            DataOutputStream socketOS = new DataOutputStream(MainActivity.getSocket().getOutputStream());
+            socketOS.writeUTF(productJSON);
+            socketOS.flush();
+            socketOS.close();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 
 }
