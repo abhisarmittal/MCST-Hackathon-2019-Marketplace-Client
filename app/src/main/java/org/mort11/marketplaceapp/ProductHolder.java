@@ -1,8 +1,5 @@
 package org.mort11.marketplaceapp;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-
-import androidx.core.content.res.TypedArrayUtils;
 
 public class ProductHolder {
     public static ArrayList<Product> products;
@@ -12,7 +9,6 @@ public class ProductHolder {
 
     public static Product addProduct(String productJSON)
     {
-        //CONVERT
         return null;
     }
 

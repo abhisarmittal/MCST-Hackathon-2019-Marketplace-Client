@@ -10,7 +10,9 @@ import android.util.Log;
 
 import com.google.android.material.tabs.TabLayout;
 
+import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.net.Inet4Address;
 import java.net.Socket;
 
@@ -46,7 +48,7 @@ public class MainActivity extends AppCompatActivity{
             public void run() {
                 try {
                     Log.d("Custom", "Attempting to connect on port 4006");
-                    socket = new Socket(Inet4Address.getByName("192.168.43.154"), 4007);
+                    socket = new Socket(Inet4Address.getByName("192.168.43.154"), 4039);
                     Log.d("Custom", "Connection established!!");
                     connectingDialogFragment.dismiss();
                 }catch(IOException e){
@@ -63,10 +65,10 @@ public class MainActivity extends AppCompatActivity{
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        try {
-            socket.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            socket.close();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 }

@@ -29,6 +29,4 @@ public class Buy extends Fragment {
         //registerForContextMenu(productListView);
     }
 
-
-
 }

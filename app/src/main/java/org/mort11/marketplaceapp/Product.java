@@ -4,7 +4,9 @@ import android.util.Log;
 
 import com.google.gson.Gson;
 
+import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 
 public class Product {
     public String name;
@@ -15,20 +17,33 @@ public class Product {
         this.name = name;
         this.price = price;
         this.description = description;
+        if(name == null || name.isEmpty()){
+            name = "";
+        }
+        if(description == null || description.isEmpty()){
+            description = "";
+        }
     }
 
     public void sendToServer(){
         Gson gson = new Gson();
-        String productJSON = gson.toJson(this);
-        try {
-            DataOutputStream socketOS = new DataOutputStream(MainActivity.getSocket().getOutputStream());
-            socketOS.writeUTF(productJSON);
-            socketOS.flush();
-            socketOS.close();
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-        Log.d("Custom", "Data sent to server!");
+        final String productJSON = gson.toJson(this);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Log.d("Custom", productJSON);
+                    DataOutputStream socketOS = new DataOutputStream(MainActivity.getSocket().getOutputStream());
+                    socketOS.writeUTF(productJSON);
+                    socketOS.flush();
+                }catch(IOException e){
+                    Log.d("Custom", "Connection to server: " + MainActivity.getSocket().isConnected());
+                    Log.d("Custom", "Crashed!!!");
+                    //Log.d("Custom", e.getLocalizedMessage());
+                }
+                Log.d("Custom", "Data sent to server!");
+            }
+        }).start();
     }
 
 }
