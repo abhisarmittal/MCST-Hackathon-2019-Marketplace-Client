@@ -28,9 +28,9 @@ public class Sell extends Fragment {
         submit.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                //TextInputEditText productNameField = view.findViewById(R.id.product_name);
-                //TextInputEditText productPriceField = view.findViewById(R.id.product_price);
-                //TextInputEditText productDescriptionField = view.findViewById(R.id.product_description);
+                TextInputEditText productNameField = view.findViewById(R.id.product_name);
+                TextInputEditText productPriceField = view.findViewById(R.id.product_price);
+                TextInputEditText productDescriptionField = view.findViewById(R.id.product_description);
 
                 //String productName = productNameField.getText().toString();
                 //double productPrice = Double.parseDouble(productPriceField.getText().toString());
