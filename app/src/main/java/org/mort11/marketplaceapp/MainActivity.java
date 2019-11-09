@@ -10,6 +10,10 @@ import android.util.Log;
 
 import com.google.android.material.tabs.TabLayout;
 
+import java.io.IOException;
+import java.net.Inet4Address;
+import java.net.Socket;
+
 public class MainActivity extends AppCompatActivity{
 
     private static Context context;
